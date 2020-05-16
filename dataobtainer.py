@@ -18,7 +18,7 @@ def readIdFile(input_file_name, output_file_name):
         while line != "":
             tweet = t.tweet(line.strip())
             if tweet["lang"] == "en":
-                output_file.write(json.dumps(tweet))
+                output_file.write(json.dumps(tweet) + "\n")
                 print(i)
                 i += 1
             line = inputF.readline()
