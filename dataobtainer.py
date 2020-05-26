@@ -47,7 +47,7 @@ def tweetsClean(tweets):
     #output csv
     print("extract data")
     index = 1
-    fileDict = {i: csv.writer(open(i+".csv", "w", encoding="utf-8")) for i in KEYWORD}
+    fileDict = {i: csv.writer(open(i+".csv", "a", encoding="utf-8")) for i in KEYWORD}
     for tweet in tweets:
         if filter(tweet):
             t = datetime.datetime.strptime(tweet["created_at"], "%a %b %d %X %z %Y")
